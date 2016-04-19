@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title>Data In A Box</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+    .navbar-brand {
+        padding: 7px 15px;
+    }
+    #nav_logo {
+        display: inline-block;
+        width: 36px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        {% block navbar %}
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle"
+                    data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url_for('index' )}}"><img id="nav_logo" src="static/images/orange-database-256.png" alt="Logo Image"/> Data In A Box</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url_for('index' )}}">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav  navbar-right">
+                        <li><a href="#">Sign In</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </header>
+    <div class="container">
+        <!-- Errors -->
+        {% if errors %}
+            <p class="error"><strong>Error:</strong> {{ errors }}</p>
+        {% endif %}
+
+        <!-- Flash Messages -->
+        {% for messages in get_flashed_messages() %}
+            {{ messages }}
+        {% endfor %}
+
+        <!-- Child Template -->
+        {% block content %}{% endblock %}
+
+        <footer>
+
+        </footer>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
