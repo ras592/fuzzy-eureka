@@ -27,7 +27,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ url_for('index' )}}"><img id="nav_logo" src="static/images/orange-database-256.png" alt="Logo Image"/> Data In A Box</a>
+                    <a class="navbar-brand" href="{{ url_for('index')}}"><img id="nav_logo" src="static/images/orange-database-256.png" alt="Logo Image"/> Data In A Box</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -43,9 +43,9 @@
     </header>
     <div class="container">
         <!-- Errors -->
-        {% if errors %}
-            <p class="error"><strong>Error:</strong> {{ errors }}</p>
-        {% endif %}
+        {% for error in errors %}
+            <p class="error"><strong>Error:</strong> {{ error }}</p>
+        {% endfor %}
 
         <!-- Flash Messages -->
         {% for messages in get_flashed_messages() %}
