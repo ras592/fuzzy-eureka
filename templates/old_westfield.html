@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Banner -->
+<section id="banner">
+	<div class="inner">
+		<h2>
+			<img id="banner_img" src="{{ url_for('static', filename='images/T3.png', _external=True) }}" width="100%" height="100%">
+		</h2>
+
+		<ul class="actions">
+			<li></li>
+		</ul>
+	</div>
+	<a href="#one" class="more scrolly">Learn More</a>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Old Westfield photography<br>A new beginning</h2>
+			<p>Old Westfield Photography is a business dedicated to providing affordable quality photography,<br>while also helping amazing new photographers get their start.</p>
+		</header>
+	</div>
+</section>
+
+<!-- Two -->
+<section id="two" class="wrapper alt style2">
+	<section class="spotlight">
+		<div class="image">
+			<img src="{{ url_for('static', filename='images/img1.jpg', _external=True) }}" alt="#" width="748" height="462" class="ccm-image-block img-responsive bID-200">
+
+		</div>
+		<div class="content">
+			<h2>The Mission</h2>
+			<p>Old Westfield Photography is essentially a group that helps photographers get their feet wet in the business of photography. &nbsp;Our goal is to provide very affordable photography by using talented&nbsp;students and self-taught photographers who can't afford the start-up costs&nbsp;or don't know how to start a business as a freelance photographer.&nbsp; We are here to get them noticed. We provide&nbsp;the right tools to these&nbsp;photographers so they could one day start their own freelance photography business or at least build their portfolio and make some money.</p>
+		</div>
+	</section>
+	<section class="spotlight">
+		<div class="image">
+			<img src="{{ url_for('static', filename='images/img2.jpg', _external=True) }}" alt="#" width="748" height="460" class="ccm-image-block img-responsive bID-201">
+
+		</div>
+		<div class="content">
+
+			<h2>What we photograph</h2>
+
+			<p>By having extremely competitive prices we hope it opens the door to everything. &nbsp;If it can be photographed we would love to take the picture, whether it's for a birthday, a sports event, a new portrait, stock pictures or even for commercial use. &nbsp;See our services page to get a full spectrum of what we photograph and some of our recent work.</p>
+			<p align="center">
+				<a href="/services" class="button">Services</a>
+			</p>
+		</div>
+	</section>
+	<section class="spotlight">
+		<div class="image">
+			<img src="{{ url_for('static', filename='images/img3.jpg', _external=True) }}" alt="Laptop Image" width="748" height="462" class="ccm-image-block img-responsive bID-199">
+		</div>
+		<div class="content">
+			<h2>our tools</h2>
+			<p>We pride ourselves on our tools. &nbsp;Our photographers get a website where they can showcase their work and run a blog, basically an online business card. &nbsp;They also get their own online store for making it easy to sell pictures to clients, and lots of cloud storage for keeping backups of clients photos and so much more.</p>
+		</div>
+	</section>
+</section>
+
+<!-- Three -->
+<section id="three" class="wrapper style3 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Let's Break It Down</h2>
+			<p>Here's what makes us great!</p>
+		</header>
+		<ul class="features">
+			<li id="goals">
+				<h3 style="text-align: center;">Our Goals</h3>
+				<p style="text-align: center;">This business's mission is something everyone can get behind.</p>
+            </li>
+            <li id="photographers">
+				<h3 style="text-align: center;">Our Photographers</h3>
+				<p style="text-align: center;">Our photographers are&nbsp;talented, what can I say.</p>
+            </li>
+             <li data-id="0" id="prices">
+	 			<h3 style="text-align: center;">Our Prices</h3>
+				<p style="text-align: center;">We're not expensive which makes it great for anyone who wants a photographer for any reason.</p>
+            </li>
+             <li data-id="0" id="tools">
+	 			<h3 style="text-align: center;">Our Tools</h3>
+				<p style="text-align: center;">We use amazing tools so we can make our clients experience as seamless as possible.</p>
+            </li>
+		</ul>
+	</div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="wrapper style4">
+	<div class="inner">
+		<header>
+			<h2>Join US</h2>
+			<p>Are you interested in becoming an Old Westfield Photographer?</p>
+		</header>
+		<ul class="actions vertical">
+			<li><a href="/application" class="button fit special">Start Process</a></li>
+			<li><a href="/learn-more" class="button fit">Learn More</a></li>
+		</ul>
+	</div>
+</section>
+{% endblock %}
