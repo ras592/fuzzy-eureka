@@ -15,11 +15,13 @@ TO-DO:
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css', _external=True) }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css', _external=True) }}" />
         <style>
         #banner_img {
-            margin-top: 200px;
+            margin-top: 30%;
         }
         </style>
+
 	</head>
 	<body class="landing">
     <div class="ccm-page page-template-full">
@@ -97,6 +99,12 @@ TO-DO:
 		<script src="{{ url_for('static', filename='js/init.js', _external=True) }}"></script>
         <script src="{{ url_for('static', filename='js/features.js', _external=True) }}"></script>
 		<script src="{{ url_for('static', filename='js/hover.js', _external=True) }}"></script>
+		<script src="{{ url_for('static', filename='js/wow.min.js', _external=True) }}"></script>
+
         <script src="//maps.google.com/maps/api/js?sensor=true"></script>
+
 	</body>
+	<script>
+              new WOW().init();
+              </script>
 </html>
