@@ -11,7 +11,7 @@ $(document).ready(function() {
         if(index % 2 == 1) {
             $(this).html("<h3 style=\"text-align: center;\">Our Prices</h3><p style=\"text-align: center;\">We're not expensive which makes it great for anyone who wants a photographer for any reason.</p>");
         } else {
-            $(this).html("<h3 style=\"text-align: center;\">Our Prices</h3><h4>$45 per hour</h4>");
+            $(this).html("<h3 style=\"text-align: center;\">Our Prices</h3><h4 class=\"animated bounceIn\">$45 per hour</h4>");
         }
         index += 1;
         console.log(index);
@@ -21,7 +21,7 @@ $(document).ready(function() {
     $('ul.features #tools').click(function() {
         var tools = [
             "<h4>Our Tools</h4>",
-            "<ul class=\"icons\">",
+            "<ul class=\"icons animated bounceIn\">",
                 "<li><a href=\"http://www.adobe.com/products/photoshop/selector.html\"><img src=\"/static/images/photoshop.png\" width=\"50%\"></a></li>",
                 "<li><a href=\"https://www.adobe.com/products/photoshop-lightroom.html\"><img src=\"/static/images/lightroom.png\" width=\"50%\"></a></li>",
             "</ul>",
