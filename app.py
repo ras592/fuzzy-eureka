@@ -34,10 +34,27 @@ def contact():
     		entry['phone'] = ""
     	entry['message'] = request.form['message']
     	for m in entry:
-    		print(m)
+    		print(entry[m])
     	flash('Thank you!')
     	redirect('/contact')
     return render_template('contact.html', errors=errors)
+
+@app.route('/sign_up', methods=["GET", "POST"])
+def sign_up():
+    errors = []
+    if request.method == 'POST':
+    	entry = {}
+    	entry['name'] = request.form['name']
+    	entry['email'] = request.form['email']
+    	if 'phone' in request.form:
+    		entry['phone'] = request.form['phone']
+    	else:
+    		entry['phone'] = ""
+    	for m in entry:
+    		print(entry[m])
+    	flash('Thank you! We will call to schedule an interview.')
+    	redirect('/sign_up')
+    return render_template('sign_up.html', errors=errors)
 
 @app.route('/founders')
 def founders():
