@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Main -->
+<article id="main">
+	<header>
+        <h2>Contact US</h2>
+        <p>Get in touch</p>
+	</header>
+	<section class="wrapper style5">
+		<div class="inner">
+            <div class="sign_up_col">
+                <h3>Join Us</h3>
+                <form enctype="multipart/form-data" class="form-stacked" method="post">
+                    <div class="fields">
+                        <div class="form-group field field-text">
+                            <label class="control-label" for="name">Name <span class="text-muted small" style="font-weight: normal; color: red;font-size:.8em;">Required</span></label>
+                            <input name="name" id="name" class="form-control" type="text" value="" />
+                        </div>
+                        <div class="form-group field field-email">
+                            <label class="control-label" for="email">Email <span class="text-muted small" style="font-weight: normal; color: red;font-size:.8em;">Required</span></label>
+                            <input name="email" id="email" class="form-control" type="email" value="" />
+                        </div>
+                        <div class="form-group field field-text">
+                            <label class="control-label" for="phone">Phone Number</label>
+                            <input name="phone" id="phone" class="form-control" type="text" value="" />
+                        </div>
+                    </div><!-- .fields -->
+                    <button type="submit" class="btn btn-default" style="margin-top: 10px;">Submit</button>
+                </form>
+            </div>
+		</div>
+	</section>
+</article>
+{% endblock %}
