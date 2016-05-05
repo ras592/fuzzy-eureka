@@ -9,7 +9,7 @@ $(document).ready(function() {
         var index = $(this).data('id');
         console.log(index);
         if(index % 2 == 1) {
-            $(this).html("<h3 style=\"text-align: center;\">Our Prices</h3><p style=\"text-align: center;\">We're not expensive which makes it great for anyone who wants a photographer for any reason.</p>");
+            $(this).html("<h3 style=\"text-align: center;\">Our Prices</h3><p style=\"text-align: center;\">There is no need to compromise quality and cost with Old Westfield Photography.</p>");
         } else {
             $(this).html("<h3 style=\"text-align: center;\">Our Prices</h3><h4 class=\"animated bounceIn\">$45 per hour</h4>");
         }
@@ -28,7 +28,7 @@ $(document).ready(function() {
         ].join("");
         var og = [
             "<h3 style=\"text-align: center;\">Our Tools</h3>",
-            "<p style=\"text-align: center;\">We use amazing tools so we can make our clients experience as seamless as possible.</p>"
+            "<p style=\"text-align: center;\">Combined with our cloud platform we provide our photographers industry standard software to deliver clients the highest quality media possible.</p>"
         ].join("");
         var index = $(this).data('id');
         if(index % 2 == 1) {
