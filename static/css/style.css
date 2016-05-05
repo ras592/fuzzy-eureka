@@ -66,6 +66,17 @@
 
 /* Basic */
 
+.Gallery img{
+	width: auto;
+	height:150px;
+
+
+}
+.Gallery ul li {
+	display: inline-flex;
+}
+
+
 	body {/*
 	background-color: rgba(15,15,15,1);
 */}
