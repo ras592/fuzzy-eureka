@@ -26,6 +26,12 @@ TO-DO:
         	display: inline-block;
         	text-align: center;
         }
+        .column_services {
+        	display: inline-block;
+        }
+        .column_services ul, .column_services li {
+        	list-style: none;
+        }
         .contact-col {
         	display: inline-block;
         }
@@ -46,6 +52,10 @@ TO-DO:
         		width: 48%;
         		margin: 0 auto;
         	}
+        	.column_services {
+				width: 48%;
+        		margin: 0 auto;
+        	}
         	.contact-col:first-child {
 		 		width: 48%;
         		margin: 0 0 0 -80px;
@@ -58,6 +68,11 @@ TO-DO:
         @media screen and (max-width: 1280px) {
         	.column_bio {
         		width: 100%;
+        		margin: 0 auto;
+        		min-width: 300px;
+        	}
+        	.column_services {
+				width: 100%;
         		margin: 0 auto;
         		min-width: 300px;
         	}
