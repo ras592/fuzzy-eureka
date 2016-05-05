@@ -44,5 +44,10 @@ def founders():
     errors = []
     return render_template('founders.html', errors=errors)
 
+@app.route('/gallery')
+def gallery():
+	errors = []
+	return render_template('gallery.html', errors=errors)
+
 if __name__ == '__main__':
     app.run(debug=True)
