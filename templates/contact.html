@@ -1,15 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<style type="text/css" data-style-set="7">.ccm-custom-style-container.ccm-custom-style-p18-159{padding-right:50px;padding-left:50px;border-style:none;}</style>
-<link href="/index.php/ccm/system/css/layout/145" rel="stylesheet" type="text/css" media="all">
-<script type="text/javascript" src="/updates/concrete5.7.3.1/concrete/js/jquery.js"></script>
-<link href="/updates/concrete5.7.3.1/concrete/blocks/google_map/view.css" rel="stylesheet" type="text/css" media="all">
-<link href="/updates/concrete5.7.3.1/concrete/css/frontend/errors.css" rel="stylesheet" type="text/css" media="all">
-<link href="/updates/concrete5.7.3.1/concrete/blocks/form/view.css" rel="stylesheet" type="text/css" media="all">
-		<link rel="stylesheet" href="/application/themes/Spectral/css/style.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="/application/themes/Spectral/css/ie/v9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="/application/themes/Spectral/css/ie/v8.css" /><![endif]-->
-	</head>
 <!-- Main -->
 <article id="main">
 	<header>
@@ -18,83 +8,38 @@
 	</header>
 	<section class="wrapper style5">
 		<div class="inner">
-            <div class="ccm-layout-column-wrapper" id="ccm-layout-column-wrapper-145">
-                <div class="ccm-layout-column" id="ccm-layout-column-9">
-                    <div class="ccm-layout-column-inner">
-                        <h3>We Operate on Long Island</h3>
-                        <div id="googleMapCanvas155" class="googleMapCanvas" style="width: 100%; height: 400px"></div>
-                        <script type="text/javascript">
-                            function googleMapInit155() {
-                                try{
-                                    var latlng = new google.maps.LatLng(40.7891424, -73.13496049999998);
-                                    var mapOptions = {
-                                        zoom: 9,
-                                        center: latlng,
-                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                        streetViewControl: false,
-                                        scrollwheel: false,
-                                        mapTypeControl: false
-                                    };
-                                    var map = new google.maps.Map(document.getElementById('googleMapCanvas155'), mapOptions);
-                                    var marker = new google.maps.Marker({
-                                        position: latlng,
-                                        map: map
-                                    });
-                                }catch(e){
-                                    $("#googleMapCanvas155").replaceWith("<p>Unable to display map: "+e.message+"</p>")}
-                            }
-                            $(function() {
-                                var t;
-                                var startWhenVisible = function (){
-                                    if ($("#googleMapCanvas155").is(":visible")){
-                                        window.clearInterval(t);
-                                        googleMapInit155();
-                                        return true;
-                                    }
-                                    return false;
-                                };
-                                if (!startWhenVisible()){
-                                    t = window.setInterval(function(){startWhenVisible();},100);
-                                }
-                            });
-                        </script>
-                    </div>
-                </div>
-                <div class="ccm-layout-column" id="ccm-layout-column-10">
-                    <div class="ccm-layout-column-inner">
-                        <div class="ccm-custom-style-container ccm-custom-style-p18-159" >
-                            <div id="formblock159" class="ccm-block-type-form">
-                                <form enctype="multipart/form-data" class="form-stacked" id="miniSurveyView159" class="miniSurveyView" method="post" action="/index.php/contact/submit_form#formblock159">
-                                    <div class="fields">
-                                        <div class="form-group field field-text">
-                                            <label class="control-label" for="Question5">Name <span class="text-muted small" style="font-weight: normal">Required</span></label>
-                                            <input name="Question5" id="Question5" class="form-control" type="text" value="" />
-                                        </div>
-                                        <div class="form-group field field-email">
-                                            <label class="control-label" for="Question6">Email <span class="text-muted small" style="font-weight: normal">Required</span></label>
-                                            <input name="Question6" id="Question6" class="form-control" type="email" value="" />
-                                        </div>
-                                        <div class="form-group field field-text">
-                                            <label class="control-label" for="Question7">Phone Number</label>
-                                            <input name="Question7" id="Question7" class="form-control" type="text" value="" />
-                                        </div>
-                                        <div class="form-group field field-textarea">
-                                            <label class="control-label" for="Question8">Message <span class="text-muted small" style="font-weight: normal">Required</span></label>
-                                            <textarea name="Question8" class="form-control" id="Question8" cols="50" rows="3"></textarea>
-                                        </div>
-                                   </div><!-- .fields -->
-                                    <div class="form-actions">
-                                    	<input type="submit" name="Submit" class="btn btn-primary" value="Submit" />
-                                    </div>
-                                    <input name="qsID" type="hidden" value="1429192108" />
-                                    <input name="pURI" type="hidden" value="" />
-                                </form>
-                            </div><!-- .formblock -->
-                        </div>
-                    </div>
-                </div>
+            <div class="contact-col">
+                <h3>We Operate on Long Island</h3>
+                <!-- Begin Google Map -->
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:400px;width:500px;'><div id='gmap_canvas' style='height:440px;width:500px;'></div><div><small><a href="http://embedgooglemaps.com">                                   embed google maps                           </a></small></div><div><small><a href="http://freedirectorysubmissionsites.com/">directory submission sites</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:11,center:new google.maps.LatLng(40.7888374,-73.13500590000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.7888374,-73.13500590000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Old Westfield Photography</strong><br>3125 Veterans Memorial Hwy Ronkonkoma, NY 11779<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                <!-- End Google Map -->
             </div>
-            <hr />
+            <div class="contact-col">
+                <h3>Email Us</h3>
+                <form enctype="multipart/form-data" class="form-stacked" method="post">
+                    <div class="fields">
+                        <div class="form-group field field-text">
+                            <label class="control-label" for="Question5">Name <span class="text-muted small" style="font-weight: normal; color: red;font-size:.8em;">Required</span></label>
+                            <input name="Question5" id="Question5" class="form-control" type="text" value="" />
+                        </div>
+                        <div class="form-group field field-email">
+                            <label class="control-label" for="Question6">Email <span class="text-muted small" style="font-weight: normal; color: red;font-size:.8em;">Required</span></label>
+                            <input name="Question6" id="Question6" class="form-control" type="email" value="" />
+                        </div>
+                        <div class="form-group field field-text">
+                            <label class="control-label" for="Question7">Phone Number</label>
+                            <input name="Question7" id="Question7" class="form-control" type="text" value="" />
+                        </div>
+                        <div class="form-group field field-textarea">
+                            <label class="control-label" for="Question8">Message <span class="text-muted small" style="font-weight: normal; color: red;font-size:.8em;">Required</span></label>
+                            <textarea name="Question8" class="form-control" id="Question8" cols="50" rows="3"></textarea>
+                        </div>
+                    </div><!-- .fields -->
+                    <div class="form-actions">
+                    	<input type="submit" name="Submit" class="btn btn-primary" value="Submit" />
+                    </div>
+                </form>
+            </div>
 		</div>
 	</section>
 </article>
