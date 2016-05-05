@@ -24,18 +24,46 @@ TO-DO:
         	display: inline-block;
         	text-align: center;
         }
-        @media screen and (min-width: 1000px ) {
+        .contact-col {
+        	display: inline-block;
+        }
+        .wrapper.style5 label {
+        	font-size: 1em;
+        }
+        @media screen and (min-width: 1281px) {
         	.column_bio {
         		width: 48%;
         		margin: 0 auto;
         	}
+        	.contact-col:first-child {
+		 		width: 48%;
+        		margin: 0 0 0 -80px;
+		    }
+		    .contact-col {
+		 		width: 48%;
+        		margin: 0 0 0 100px;
+		    }
         }
-        @media screen and (max-width: 999px) {
+        @media screen and (max-width: 1280px) {
         	.column_bio {
         		width: 100%;
         		margin: 0 auto;
         		min-width: 300px;
         	}
+        	.contact-col:first-child {
+		 		width: 100%;
+        		margin: 0 auto;
+        		text-align: center;
+        		min-width: 300px;
+		    }
+		    .contact-col:first-child div {
+        		margin: 0 auto;
+		    }
+        	.contact-col {
+		    	width: 100%;
+        		margin: 0 auto;
+        		min-width: 300px;
+		    }
         }
         </style>
 
@@ -117,11 +145,6 @@ TO-DO:
         <script src="{{ url_for('static', filename='js/features.js', _external=True) }}"></script>
 		<script src="{{ url_for('static', filename='js/hover.js', _external=True) }}"></script>
 		<script src="{{ url_for('static', filename='js/wow.min.js', _external=True) }}"></script>
-
-        <script src="//maps.google.com/maps/api/js?sensor=true"></script>
-
+		<script>new WOW().init();</script>
 	</body>
-	<script>
-              new WOW().init();
-              </script>
 </html>
