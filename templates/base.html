@@ -100,14 +100,19 @@ TO-DO:
         </style>
 
 	</head>
-	<body class="landing">
+	<body class="landing wow fadeIn" data-wow-duration="1.5s">
+
     <div class="ccm-page page-template-full">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
+
+
+
+
+					<header id="header" {% if request.path == "/" %} class="alt" {% endif %}>
 						<h1><a href="/">Old Westfield Photography</a></h1>
 						<nav id="nav">
 							<ul>
@@ -136,6 +141,7 @@ TO-DO:
 							</ul>
 						</nav>
 					</header>
+
                 <!-- Errors -->
                 {% for error in errors %}
                     <p class="error"><strong>Error:</strong> {{ error }}</p>
@@ -182,6 +188,8 @@ TO-DO:
 		<script src="{{ url_for('static', filename='js/wow.min.js', _external=True) }}"></script>
 		<script src="{{ url_for('static', filename='js/lightbox.min.js', _external=True) }}"></script>
 
+
 		<script>new WOW().init();</script>
+
 	</body>
 </html>
